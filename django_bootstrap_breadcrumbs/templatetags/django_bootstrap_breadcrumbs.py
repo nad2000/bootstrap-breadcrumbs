@@ -11,10 +11,10 @@ from django.urls import resolve, Resolver404, reverse, NoReverseMatch
 from django.utils.html import escape
 from django.utils.safestring import mark_safe
 from django.utils.encoding import smart_str
+from django.utils.functional import wraps
 from django.db.models import Model
 from django.conf import settings
 from django import template, VERSION
-from six import wraps
 
 from django.utils.translation import gettext as _
 

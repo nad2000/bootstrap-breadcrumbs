@@ -1,5 +1,4 @@
 pytest
 pytest-pycodestyle
 pytest-cov
-six
 testfixtures

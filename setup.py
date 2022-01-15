@@ -13,18 +13,17 @@ from setuptools import setup, find_packages
 
 setup(
     name='django_bootstrap_breadcrumbs',
-    version='0.9.2',
+    version='1.0.0',
     url='http://prymitive.github.com/bootstrap-breadcrumbs',
     license='MIT',
     description='Django breadcrumbs for Bootstrap 2, 3 or 4',
     long_description='Django template tags used to generate breadcrumbs html '
                      'using bootstrap css classes or custom template',
-    author='Łukasz Mierzwa',
-    author_email='l.mierzwa@gmail.com',
+    author='Łukasz Mierzwa, Christian Wiegand',
+    author_email='christianwgd@gmail.com',
+    maintainer='Christian Wiegand',
     packages=find_packages(exclude=['tests']),
-    install_requires=[
-        'six',
-    ],
+    install_requires=[],
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Intended Audience :: Developers',
