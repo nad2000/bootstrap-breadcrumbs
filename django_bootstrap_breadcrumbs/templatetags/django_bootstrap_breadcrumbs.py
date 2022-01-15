@@ -4,30 +4,20 @@
     :contact: l.mierzwa@gmail.com
 """
 
-
-from __future__ import unicode_literals
-
 import logging
 from inspect import ismethod
 
+from django.urls import resolve, Resolver404, reverse, NoReverseMatch
 from django.utils.html import escape
 from django.utils.safestring import mark_safe
-from django.utils.encoding import smart_text
+from django.utils.encoding import smart_str
 from django.db.models import Model
 from django.conf import settings
 from django import template, VERSION
 from six import wraps
 
-if VERSION >= (3, 0):
-    from django.utils.translation import gettext as _
-else:
-    from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 
-if VERSION >= (2, 0):
-    from django.urls import (reverse, resolve, NoReverseMatch, Resolver404)
-else:
-    from django.core.urlresolvers import (reverse, resolve, NoReverseMatch,
-                                          Resolver404)
 
 logger = logging.getLogger(__name__)
 
@@ -38,14 +28,11 @@ CONTEXT_KEY = 'DJANGO_BREADCRUMB_LINKS'
 
 
 def log_request_not_found():
-    if VERSION < (1, 8):  # pragma: nocover
-        logger.error("request object not found in context! Check if "
-                     "'django.core.context_processors.request' is in "
-                     "TEMPLATE_CONTEXT_PROCESSORS")
-    else:  # pragma: nocover
-        logger.error("request object not found in context! Check if "
-                     "'django.template.context_processors.request' is in the "
-                     "'context_processors' option of your template settings.")
+    logger.error(
+        "request object not found in context! Check if "
+        "'django.template.context_processors.request' is in the "
+        "'context_processors' option of your template settings."
+    )
 
 
 def requires_request(func):
@@ -148,7 +135,7 @@ def render_breadcrumbs(context, *args):
                               kwargs=view_kwargs, current_app=current_app)
             except NoReverseMatch:
                 url = viewname
-        links.append((url, smart_text(label) if label else label))
+        links.append((url, smart_str(label) if label else label))
 
     if not links:
         return ''
