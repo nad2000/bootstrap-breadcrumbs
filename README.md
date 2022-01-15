@@ -5,9 +5,18 @@ django-bootstrap-breadcrumbs
 
 See https://django-bootstrap-breadcrumbs.readthedocs.org/en/latest/
 
+This is a fork of the uncontinued repo [django-bootstrap-breadcrumbs](https://github.com/prymitive/bootstrap-breadcrumbs/blob/master/docs/index.rst) 
+by prymitive. The repository tries to keep the functionality uptodate with current 
+versions of python and django. Support for python2 and django < 3.2 was dropped. 
 
 Testing
 =======
+
+Plain testing:
+
+```
+py.test -v --pycodestyle --cov=django_bootstrap_breadcrumbs
+```
 
 Included Dockerfile allows to run tests using python3 from debian jessie.
 
@@ -17,7 +26,7 @@ Test with the most recent django version::
 
 To specify django version to use for testing set the version via DJANGO arg to docker::
 
-    docker build --build-arg DJANGO===1.9.1 .
+    docker build --build-arg DJANGO===3.2.11 .
 
 DJANGO argument will be passed to pip using `pip install Django${DJANGO}`, so you can pass any version string pip accepts (==version, >=version).
 
