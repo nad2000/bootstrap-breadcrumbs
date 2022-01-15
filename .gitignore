@@ -3,3 +3,6 @@
 *.pyc
 local_settings.py
 .idea/
+django_bootstrap_breadcrumbs.egg-info/
+.pytest_cache/
+.coverage

@@ -1,5 +1,5 @@
 pytest
-pytest-pep8
+pytest-pycodestyle
 pytest-cov
 six
 testfixtures

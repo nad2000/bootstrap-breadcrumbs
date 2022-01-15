@@ -24,4 +24,4 @@ RUN pip3 install "django${DJANGO}"
 RUN (cd /src && python3 setup.py develop)
 
 RUN pip3 freeze | grep -i django
-RUN (cd /src && py.test -v --pep8 --cov=django_bootstrap_breadcrumbs)
+RUN (cd /src && py.test -v --pycodestyle --cov=django_bootstrap_breadcrumbs)
