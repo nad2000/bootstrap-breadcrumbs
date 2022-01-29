@@ -2,6 +2,7 @@
 
 [![Version](https://img.shields.io/pypi/v/django-bootstrap-breadcrumbs2.svg)](https://pypi.python.org/pypi/django-bootstrap-breadcrumbs2)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/django-bootstrap-breadcrumbs2)
+[![Django CI run test](https://github.com/christianwgd/bootstrap-breadcrumbs/actions/workflows/pytest.yml/badge.svg)](https://github.com/christianwgd/bootstrap-breadcrumbs/actions/workflows/pytest.yml)
 
 ## Documentation
 
