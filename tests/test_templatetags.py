@@ -5,8 +5,6 @@
 """
 
 
-from __future__ import unicode_literals
-
 from django import VERSION
 from django.test import TestCase
 from django.template import Context, Template
