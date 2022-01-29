@@ -10,7 +10,8 @@ https://django-bootstrap-breadcrumbs.readthedocs.org/en/latest/
 
 This is a fork of the uncontinued repo [django-bootstrap-breadcrumbs](https://github.com/prymitive/bootstrap-breadcrumbs/blob/master/docs/index.rst) 
 by prymitive. The repository tries to keep the functionality uptodate with current 
-versions of python and django. Support for python2, python < 3.7 and django < 3.2 was dropped. 
+versions of python and django. Support for python2, python < 3.8 and django < 3.2 was dropped.
+if you need to keep lower versions of python or django install the orginal version of prymitive.
 
 ##Testing
 
