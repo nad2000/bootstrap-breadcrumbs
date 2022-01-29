@@ -1,6 +1,6 @@
 # django-bootstrap-breadcrumbs
 
-[![Version](https://img.shields.io/pypi/v/django-bootstrap-breadcrumbs.svg)](https://pypi.python.org/pypi/django-bootstrap-breadcrumbs)
+[![Version](https://img.shields.io/pypi/v/django-bootstrap-breadcrumbs2.svg)](https://pypi.python.org/pypi/django-bootstrap-breadcrumbs2)
 
 ## Documentation
 
