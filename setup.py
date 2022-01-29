@@ -12,7 +12,7 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='django_bootstrap_breadcrumbs',
+    name='django-bootstrap-breadcrumbs2',
     version='1.0.0',
     url='http://prymitive.github.com/bootstrap-breadcrumbs',
     license='MIT',
@@ -23,7 +23,9 @@ setup(
     author_email='christianwgd@gmail.com',
     maintainer='Christian Wiegand',
     packages=find_packages(exclude=['tests']),
-    install_requires=[],
+    install_requires=[
+        'django'
+    ],
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Intended Audience :: Developers',

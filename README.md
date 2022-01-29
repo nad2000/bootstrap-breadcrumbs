@@ -1,16 +1,18 @@
-django-bootstrap-breadcrumbs
-============================
+# django-bootstrap-breadcrumbs
 
 [![Version](https://img.shields.io/pypi/v/django-bootstrap-breadcrumbs.svg)](https://pypi.python.org/pypi/django-bootstrap-breadcrumbs)
 
-See https://django-bootstrap-breadcrumbs.readthedocs.org/en/latest/
+## Documentation
+
+https://django-bootstrap-breadcrumbs.readthedocs.org/en/latest/
+
+## Note
 
 This is a fork of the uncontinued repo [django-bootstrap-breadcrumbs](https://github.com/prymitive/bootstrap-breadcrumbs/blob/master/docs/index.rst) 
 by prymitive. The repository tries to keep the functionality uptodate with current 
-versions of python and django. Support for python2 and django < 3.2 was dropped. 
+versions of python and django. Support for python2, python < 3.7 and django < 3.2 was dropped. 
 
-Testing
-=======
+##Testing
 
 Plain testing:
 
