@@ -12,7 +12,7 @@ from setuptools import setup, find_packages
 setup(
     name='django-bootstrap-breadcrumbs2',
     version='1.0.0',
-    url='http://prymitive.github.com/bootstrap-breadcrumbs',
+    url='https://github.com/christianwgd/bootstrap-breadcrumbs',
     license='MIT',
     description='Django breadcrumbs for Bootstrap 2, 3 or 4',
     long_description='Django template tags used to generate breadcrumbs html '
