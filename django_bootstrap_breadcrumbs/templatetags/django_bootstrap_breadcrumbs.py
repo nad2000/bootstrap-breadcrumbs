@@ -101,20 +101,18 @@ def breadcrumb_raw_safe(context, label, viewname, *args, **kwargs):
 
 @register.simple_tag(takes_context=True)
 @requires_request
-def render_breadcrumbs(context, *args):
+def render_breadcrumbs(context, template_path=None, *args):
     """
     Render breadcrumbs html using bootstrap css classes.
     """
 
-    try:
-        template_path = args[0]
-    except IndexError:
+    if not template_path:
         template_path = getattr(
-            settings, "BREADCRUMBS_TEMPLATE", "django_bootstrap_breadcrumbs/bootstrap2.html"
+            settings, "BREADCRUMBS_TEMPLATE", "django_bootstrap_breadcrumbs/bootstrap5.html"
         )
 
     links = []
-    for (label, viewname, view_args, view_kwargs) in context["request"].META.get(CONTEXT_KEY, []):
+    for label, viewname, view_args, view_kwargs in context["request"].META.get(CONTEXT_KEY, []):
         if (
             isinstance(viewname, Model)
             and hasattr(viewname, "get_absolute_url")
@@ -142,15 +140,11 @@ def render_breadcrumbs(context, *args):
     if not links:
         return ""
 
-    if VERSION > (1, 8):  # pragma: nocover
-        # RequestContext is deprecated in recent django
-        # https://docs.djangoproject.com/en/1.10/ref/templates/upgrading/
-        context = context.flatten()
-
-    context["breadcrumbs"] = links
-    context["breadcrumbs_total"] = len(links)
-
-    return mark_safe(template.loader.render_to_string(template_path, context))
+    return mark_safe(
+        template.loader.render_to_string(
+            template_path, {"breadcrumbs": links, "breadcrumbs_total": len(links)}
+        )
+    )
 
 
 class BreadcrumbNode(template.Node):

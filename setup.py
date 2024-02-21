@@ -12,9 +12,10 @@ from setuptools import setup, find_packages
 setup(
     name='django-bootstrap-breadcrumbs2',
     version='1.0.0',
-    url='https://github.com/christianwgd/bootstrap-breadcrumbs',
+    url='https://github.com/nad2000/bootstrap-breadcrumbs',
+    original_url='https://github.com/christianwgd/bootstrap-breadcrumbs',
     license='MIT',
-    description='Django breadcrumbs for Bootstrap 2, 3 or 4',
+    description='Django breadcrumbs for Bootstrap 2, 3, 4, or 5',
     long_description='Django template tags used to generate breadcrumbs html '
                      'using bootstrap css classes or custom template',
     author='Łukasz Mierzwa, Christian Wiegand',
